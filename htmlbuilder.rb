@@ -1,5 +1,4 @@
-### Figured out how to write files ###
-### Playing around ###
+### This .rb file writes .html files ###
 
 ####  Input ####
 
@@ -26,7 +25,7 @@ paragraph_color = gets
 ### End of Input ###
 
 
-
+### Debug ###
 
 puts title
 puts bgcolor #Background color
@@ -35,11 +34,14 @@ puts header_color
 puts paragraph
 puts paragraph_color
 
+### End of Debug ###
+
+
 puts "Saving results to output file 'index.html'"
 
 fh = File.new("index.html", "w")
 
-
+### Template ###
 
 
 fh.print "<!DOCTYPE html><html><head>"
@@ -61,6 +63,7 @@ fh.print ";}"
 fh.puts "</style></head>"
 
 ######## Start of body #########
+
 fh.puts "<body>"
 
 
@@ -72,6 +75,9 @@ fh.puts "<p>"
 fh.puts paragraph
 
 
-
 fh.puts "</p></body></html>"
+
+### End of template ###
+
+
 fh.close
